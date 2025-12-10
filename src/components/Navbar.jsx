@@ -19,7 +19,7 @@ export default function Navbar() {
         <nav className="navbar1">
             <div className="navbar-container">
                 <div className="navbar-logo">
-                    <img src="/icon.png" className="logo" alt="Logo" />
+                    <img src="/icon2.png" className="logo" alt="Logo" />
                 </div>
 
                 {/* Hamburger menu para mobile */}

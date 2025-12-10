@@ -25,7 +25,7 @@ export default function ScrollToTop() {
             className={`scroll-to-top ${mostrar ? 'visible' : ''}`}
             onClick={scrollToTop}
         >
-            <img src="/flecha-blanca.png" alt="Subir" />
+            <img src="/flecha-scroll-to-top.png" alt="Subir" />
         </div>
     )
 }
