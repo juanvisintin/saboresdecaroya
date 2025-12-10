@@ -43,9 +43,34 @@ h1 {
   font-family: 'TempusSans';
 }
 
+h2 {
+  font-family: 'TempusSans';
+}
+
 hr {
   border: none;
   border-top: 2px solid rgb(191, 184, 150);
+}
+
+/* Tamaño lg (992px en adelante) */
+@media (min-width: 992px) {
+  .container {
+    max-width: 850px;
+  }
+}
+
+/* Tamaño xl (1200px en adelante) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1000px;
+  }
+}
+
+/* Tamaño xxl (1400px en adelante) */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1200px;
+  }
 }
 
 /* Navbar */
@@ -129,6 +154,7 @@ hr {
 }
 
 .nav-link {
+  font-family: 'TempusSans';
   background: none;
   border: none;
   cursor: pointer;
@@ -136,7 +162,6 @@ hr {
   text-decoration: none;
   transition: ease 0.3s;
   font-size: inherit;
-  font-family: inherit;
   padding: 15px 0;
   width: 100%;
   display: block;
@@ -250,11 +275,11 @@ hr {
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
   transition: ease 0.3s;
   cursor: default;
+  display: block;
 }
 
 #nosotros .foto:hover {
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
-  transform: none;
   transition: ease 0.3s;
 }
 
@@ -284,16 +309,19 @@ hr {
     grid-column: 2;
     grid-row: 3;
     max-width: 400px;
+    margin-left: auto;
+    padding-right: 0;
   }
 
   #nosotros .foto {
     cursor: pointer;
     width: 100%;
-    max-width: 400px;
+    /* max-width: 400px; */
+    margin: 0;
   }
 
   #nosotros .foto:hover {
-    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 20px 20px 25px rgba(0, 0, 0, 0.5);
     transform: scale(1.05);
   }
 }
@@ -524,6 +552,13 @@ hr {
   border-radius: 4px;
 }
 
+.tarjeta-contacto hr {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  width: 50%;
+
+}
+
 /* Desktop - Breakpoint 1018px para Contacto */
 @media (min-width: 1018px) {
   .tarjeta-contacto .foto {
@@ -610,6 +645,7 @@ hr {
 
 /* pie */
 .pie {
+  font-family: 'TempusSans';
   background-color: rgb(38, 36, 35);
   padding: 10px;
   color: rgb(119, 115, 94);
