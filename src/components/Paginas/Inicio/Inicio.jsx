@@ -34,9 +34,9 @@ export default function Inicio() {
         <img src="inicio2.png" className="foto-inicio" />
       </div>
 
-      <section id='nosotros-section'>
-        <div className="container-fluid">
-          <div className="row mt-5" id='nosotros'>
+      <section id="seccion-nosotros">
+        <div className="container">
+          <div className="row pt-5 pb-5" id='nosotros'>
             <div className="col-12">
               <h1>Sobre nosotros</h1>
               <hr />
@@ -67,11 +67,11 @@ export default function Inicio() {
         </div>
       </section>
 
-      <section id='productos'>
+      <section id='seccion-productos'>
         <div className="productos-container">
           <img src="picada.JPG" className="productos-background" alt="Productos" />
-          <h1 className="productos-titulo">Productos</h1>
-          <hr className="productos-hr" />
+          <h1>Productos</h1>
+          <hr />
           <div className="productos-content">
             <p>Nos buscaste por los salames, pero te vamos a demostrar que somos más que una receta bonita...</p>
 
@@ -82,13 +82,11 @@ export default function Inicio() {
         </div>
       </section>
 
-      <section id='contacto-section'>
-        <div className="container-fluid">
-          <div className="row" id='contacto'>
-            <div className="col-12 mt-5">
-              <h1 className="text-center">Contacto</h1>
-              <hr />
-            </div>
+      <section id="seccion-contacto">
+        <div className="container">
+          <div className="row pt-5">
+            <h1>Contacto</h1>
+            <hr />
 
             <div className="col-12 col-lg-4">
               <div className="tarjeta-contacto">

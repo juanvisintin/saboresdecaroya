@@ -1,21 +1,13 @@
-import { Link, useNavigate } from "react-router-dom"
 import { useState } from "react"
 
 export default function Navbar() {
-    const navigate = useNavigate()
     const [menuOpen, setMenuOpen] = useState(false)
 
     const scrollToSection = (sectionId) => {
-        // Navega a la página de inicio
-        navigate('/')
-        // Después de navegar, espera a que se renderice y hace scroll
-        setTimeout(() => {
-            const element = document.getElementById(sectionId)
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth' })
-            }
-        }, 100)
-        // Cierra el menú después de hacer click
+        const element = document.getElementById(sectionId)
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' })
+        }
         setMenuOpen(false)
     }
 
@@ -27,9 +19,7 @@ export default function Navbar() {
         <nav className="navbar1">
             <div className="navbar-container">
                 <div className="navbar-logo">
-                    <Link to="/">
-                        <img src="/icon.png" className="logo" alt="Logo" />
-                    </Link>
+                    <img src="/icon.png" className="logo" alt="Logo" />
                 </div>
 
                 {/* Hamburger menu para mobile */}
@@ -41,13 +31,13 @@ export default function Navbar() {
 
                 {/* Menú lateral */}
                 <div className={`nav-menu ${menuOpen ? 'activo' : ''}`}>
-                    <button onClick={() => scrollToSection('nosotros')} className="nav-link">
+                    <button onClick={() => scrollToSection('seccion-nosotros')} className="nav-link">
                         Nosotros
                     </button>
-                    <button onClick={() => scrollToSection('productos')} className="nav-link">
+                    <button onClick={() => scrollToSection('seccion-productos')} className="nav-link">
                         Productos
                     </button>
-                    <button onClick={() => scrollToSection('contacto')} className="nav-link">
+                    <button onClick={() => scrollToSection('seccion-contacto')} className="nav-link">
                         Contacto
                     </button>
                 </div>

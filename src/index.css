@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'TempusSans';
+  src: url('/fonts/TEMPSITC.TTF') format('truetype');
+}
+
 /* Generales */
 html {
   font-size: clamp(12px, 2vw, 20px);
@@ -23,24 +28,24 @@ a:hover {
   transition: ease 0.5s;
 }
 
-.row {
+/* .row {
   margin-right: 0px;
   margin-left: 0px;
+} */
+
+h1 {
+  color: rgb(191, 184, 150);
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  position: relative;
+  z-index: 3;
+  font-family: 'TempusSans';
 }
 
-.container-fluid {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-/* Desktop - Breakpoint 768px */
-@media (min-width: 768px) {
-  .container-fluid {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
+hr {
+  border: none;
+  border-top: 2px solid rgb(191, 184, 150);
 }
 
 /* Navbar */
@@ -224,16 +229,6 @@ a:hover {
   flex-direction: column;
 }
 
-#nosotros h1 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-  order: -2;
-}
-
-#nosotros hr {
-  order: -1;
-}
-
 #nosotros .col-12 {
   width: 100%;
 }
@@ -254,11 +249,12 @@ a:hover {
   border-radius: 4px;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
   transition: ease 0.3s;
+  cursor: default;
 }
 
 #nosotros .foto:hover {
-  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.5);
-  transform: scale(1.05);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  transform: none;
   transition: ease 0.3s;
 }
 
@@ -267,23 +263,12 @@ a:hover {
   #nosotros {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 2rem;
+    grid-gap: 1rem;
     align-items: start;
   }
 
-  #nosotros h1 {
-    font-size: 2.5rem;
-    order: 0;
-    grid-column: 1 / -1;
-  }
-
-  #nosotros hr {
-    order: 0;
-    grid-column: 1 / -1;
-  }
-
   #nosotros .col-12 {
-    grid-column: auto;
+    grid-column: 1 / -1;
   }
 
   #nosotros .col-md-9 {
@@ -305,6 +290,11 @@ a:hover {
     cursor: pointer;
     width: 100%;
     max-width: 400px;
+  }
+
+  #nosotros .foto:hover {
+    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.05);
   }
 }
 
@@ -465,23 +455,7 @@ a:hover {
   z-index: 2;
 }
 
-.productos-titulo {
-  color: rgb(191, 184, 150);
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-  text-align: center;
-  position: relative;
-  z-index: 3;
-}
 
-.productos-hr {
-  position: relative;
-  z-index: 3;
-  width: 60px;
-  margin: 0.5rem 0 1.5rem 0;
-  border: none;
-  border-top: 2px solid rgb(191, 184, 150);
-}
 
 .productos-content {
   background-color: rgb(38, 36, 35);
@@ -523,9 +497,6 @@ a:hover {
 /* Esta sección fue removida del proyecto */
 
 /* Contacto */
-#contacto-section {
-  padding: 65px 20px;
-}
 
 #contacto .col-lg-4 {
   display: flex;
@@ -533,7 +504,7 @@ a:hover {
 
 .tarjeta-contacto {
   background-color: rgb(38, 36, 35);
-  padding: 1.25em 1.25em 3.5em 1.25em;
+  padding: 1.25em 5em 3.5em 1.25em;
   border-radius: 4px;
   position: relative;
   margin-bottom: 1.5em;
@@ -563,7 +534,6 @@ a:hover {
 .texto {
   position: relative;
   z-index: 1;
-  height: 80px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -574,9 +544,22 @@ a:hover {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
-  line-clamp: 2;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
+}
+
+/* Desktop - Breakpoint 1018px para Contacto */
+@media (min-width: 1018px) {
+  .texto {
+    height: auto;
+  }
+
+  .texto p {
+    -webkit-line-clamp: unset;
+    line-clamp: unset;
+    overflow: visible;
+  }
 }
 
 /* Desktop - Breakpoint 1018px para Contacto */
