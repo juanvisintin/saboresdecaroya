@@ -382,31 +382,45 @@ h3 {
 }
 
 .modal-overlay {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0);
   z-index: 9999;
+  display: none;
   justify-content: center;
   align-items: center;
+  background-color: rgba(0, 0, 0, 0);
   pointer-events: none;
 }
 
 .modal-overlay.activo {
   display: flex;
-  animation: fadeIn 0.4s ease-in-out;
   background-color: rgba(0, 0, 0, 0.8);
+  animation: fadeIn 0.3s ease forwards;
   pointer-events: auto;
 }
 
 .modal-overlay.cerrando {
   display: flex;
-  animation: fadeOut 0.4s ease-in-out;
-  background-color: rgba(0, 0, 0, 0);
+  animation: fadeOut 0.3s ease forwards;
   pointer-events: none;
+}
+
+/* Modal del componente Producto */
+.producto-card .modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease;
 }
 
 .modal-contenido {
@@ -459,12 +473,12 @@ h3 {
   background-color: #423b33;
   padding: 2rem;
   border-radius: 8px;
-  max-width: 600px;
-  width: 90%;
   color: rgb(191, 184, 150);
   position: relative;
   z-index: 3;
-  margin: 0 auto;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .productos-content p {
@@ -474,6 +488,163 @@ h3 {
 
 .productos-content p:last-child {
   margin-bottom: 0;
+}
+
+/* Grid de Productos */
+.productos-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  width: 100%;
+}
+
+@media (min-width: 576px) {
+  .productos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .productos-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .productos-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Componente Producto */
+.producto-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+  aspect-ratio: 1;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #000;
+}
+
+.producto-imagen {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+.producto-card[data-hover="true"] .producto-imagen {
+  opacity: 0.4;
+}
+
+.producto-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.producto-card[data-hover="true"] .producto-overlay {
+  opacity: 1;
+}
+
+.producto-nombre {
+  color: rgb(191, 184, 150);
+  font-family: 'TempusSans';
+  font-size: clamp(1rem, 4vw, 1.5rem);
+  text-align: center;
+  padding: 1rem;
+  margin: 0;
+}
+
+.producto-nombre {
+  color: rgb(191, 184, 150);
+  font-family: 'TempusSans';
+  font-size: clamp(1rem, 4vw, 1.5rem);
+  text-align: center;
+  padding: 1rem;
+  margin: 0;
+}
+
+.producto-btn {
+  display: none;
+}
+
+.modal-contenedor-producto {
+  background-color: rgb(38, 36, 35);
+  border-radius: 12px;
+  overflow: hidden;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  animation: zoomIn 0.3s ease;
+  z-index: 10000;
+}
+
+.modal-contenedor-producto.vertical {
+  flex-direction: column;
+}
+
+.modal-contenedor-producto.horizontal {
+  flex-direction: row;
+}
+
+.modal-imagen-producto {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.modal-contenedor-producto.vertical .modal-imagen-producto {
+  max-height: 50vh;
+  object-fit: cover;
+}
+
+.modal-contenedor-producto.horizontal .modal-imagen-producto {
+  width: 50%;
+  height: auto;
+  max-height: 80vh;
+  object-fit: cover;
+}
+
+.modal-info-producto {
+  padding: 2rem 1.5rem;
+  color: rgb(191, 184, 150);
+  overflow-y: auto;
+}
+
+.modal-contenedor-producto.vertical .modal-info-producto {
+  max-height: 40vh;
+}
+
+.modal-contenedor-producto.horizontal .modal-info-producto {
+  width: 50%;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modal-info-producto h2 {
+  font-family: 'TempusSans';
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: rgb(191, 184, 150);
+  font-size: clamp(1.2rem, 5vw, 1.8rem);
+}
+
+.modal-info-producto p {
+  margin: 0;
+  line-height: 1.6;
+  font-size: clamp(0.9rem, 3vw, 1rem);
 }
 
 /* Desktop - Breakpoint 768px */
@@ -488,7 +659,6 @@ h3 {
 
   .productos-content {
     padding: 3rem;
-    max-width: 800px;
   }
 }
 
@@ -624,6 +794,10 @@ h3 {
 
 .dias-horarios {
   margin-bottom: 0;
+}
+
+.pasa-a-visitarnos::before {
+  background-image: none !important;
 }
 
 /* Desktop - Breakpoint 1018px para Contacto */
