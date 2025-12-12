@@ -127,14 +127,22 @@ export default function Inicio() {
             <div className="col-12 mt-5 mb-5 text-center">
               <h1 className="mb-2">¡Pasá a visitarnos!</h1>
               <hr className="mb-5" />
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3419.112978758603!2d-64.06434402451416!3d-31.023101774445436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x943262648b67f569%3A0x769417cfbe265970!2sSabores%20de%20Caroya!5e0!3m2!1ses!2sar!4v1744626418366!5m2!1ses!2sar"
-                width="800" height="400"
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="mapa">
-              </iframe>
+              <div className="row contenedor-mapa">
+                <p>Te esperamos en <b>Pedro Patat (S) 105</b>, en la esquina de la plaza</p>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3419.112978758603!2d-64.06434402451416!3d-31.023101774445436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x943262648b67f569%3A0x769417cfbe265970!2sSabores%20de%20Caroya!5e0!3m2!1ses!2sar!4v1744626418366!5m2!1ses!2sar"
+                  width="800" height="400"
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade">
+                </iframe>
+                <h3 className="pt-3 pb-2">Horario de atención</h3>
+                <p className="dias-horarios"><b>Lunes a Sábados</b></p>
+                <p>De 8:00 a 13:00 y de 15:30 a 20:30</p>
+                <p className="dias-horarios"><b>Domingos</b></p>
+                <p>De 9:00 a 14:00</p>
+              </div>
+
             </div>
           </div>
         </div>
