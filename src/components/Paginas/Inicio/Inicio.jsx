@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import Producto from "../../Producto"
+import Carrusel from "../../Carrusel"
 
 export default function Inicio() {
   const [modalAbierto, setModalAbierto] = useState(false)
@@ -31,9 +32,16 @@ export default function Inicio() {
 
   return (
     <>
-      <div className="contenedor-foto">
-        <img src="inicio2.png" className="foto-inicio" />
-      </div>
+      <section id="seccion-hero">
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-12">
+              <Carrusel />
+            </div>
+          </div>
+        </div>
+      </section>
+
 
       <section id="seccion-nosotros">
         <div className="container">
