@@ -15,6 +15,17 @@ export default function Producto({ nombre, descripcion, imagen }) {
         return () => window.removeEventListener('resize', handleResize)
     }, [])
 
+    useEffect(() => {
+        const handleKeyDown = (e) => {
+            if (e.key === 'Escape' && modalAbierto) {
+                cerrarModal()
+            }
+        }
+
+        window.addEventListener('keydown', handleKeyDown)
+        return () => window.removeEventListener('keydown', handleKeyDown)
+    }, [modalAbierto])
+
     const abrirModal = () => {
         setModalAbierto(true)
     }
@@ -38,8 +49,9 @@ export default function Producto({ nombre, descripcion, imagen }) {
             >
                 <img src={imagen} className="producto-imagen" />
                 <div className="producto-overlay">
-                    <h3 className="producto-nombre">{nombre}</h3>
+                    <p className="producto-ver-mas">Ver más...</p>
                 </div>
+                <h3 className="producto-nombre">{nombre}</h3>
             </div>
 
             <div className={`modal-overlay ${modalAbierto ? 'activo' : ''} ${cerrando ? 'cerrando' : ''}`} onClick={cerrarModal}>

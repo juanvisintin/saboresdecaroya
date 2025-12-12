@@ -16,6 +16,17 @@ export default function Inicio() {
     return () => window.removeEventListener('resize', handleResize)
   }, [])
 
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape' && modalAbierto) {
+        cerrarModal()
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [modalAbierto])
+
   const abrirModal = () => {
     if (!isMobile) {
       setModalAbierto(true)
@@ -93,24 +104,64 @@ export default function Inicio() {
           <div className="row">
             <div className="col-12 productos-grid">
               <Producto
-                nombre="Salame Típico"
+                nombre="Salame Tradicional"
                 descripcion="Salame típico de Colonia Caroya. Elaborado con carne de vaca y de cerdo y tocino de cerdo. Embutido en tripa natural y estacionado en sótanos. Condimentado con sal, pimienta blanca y ajo macerado en vino blanco. No contiene conservantes ni aditivos."
-                imagen="salame1.JPG"
+                imagen="producto-salame.JPG"
               />
               <Producto
                 nombre="Jamón Crudo"
                 descripcion="Jamón de cerdo deshuesado. Condimentado con sal y pimienta blanca, estacionado en sótanos entre tres y seis meses"
-                imagen="jamon1.JPG"
+                imagen="producto-jamon.JPG"
               />
               <Producto
                 nombre="Bondiola"
                 descripcion="Bondiola de cerdo. Condimentada con sal y pimienta blanca, estacionada en sótanos entre tres y seis meses."
-                imagen="bondiola1.JPG"
+                imagen="producto-bondiola.JPG"
               />
               <Producto
-                nombre="Vacío arrollado"
+                nombre="Vacío Arrollado"
                 descripcion="Vacío arrollado de cerdo. Condimentado con sal y pimienta blanca, estacionado en sótanos entre cuatro y ocho meses."
-                imagen="vacio1.JPG"
+                imagen="producto-vacio.JPG"
+              />
+              <Producto
+                nombre="Lomito"
+                descripcion="Lomito de cerdo. Condimentado con sal y pimienta blanca, estacionado en sótanos entre tres y seis meses."
+                imagen="producto-lomito.JPG"
+              />
+              <Producto
+                nombre="Panceta"
+                descripcion="Panceta de cerdo arrollada con el lomito adentro. Fiambre condimentado con sal y pimienta blanca, estacionado en sótanos entre cuatro y ocho meses."
+                imagen="producto-panceta.JPG"
+              />
+              <Producto
+                nombre="Quesos"
+                descripcion="Quesos de vaca artesanales. Experiencia sensorial similar a la de un sardo fresco o un holanda. Naturales y saborizados con especias: pimienta en grano, orégano, ají, albahaca, provenzal."
+                imagen="producto-quesos.JPG"
+              />
+              <Producto
+                nombre="Vinos"
+                descripcion="Bebamos de las copas lindas. Vinos de las mejores bodegas caroyenses. Muchos de ellos premiados nacional e internacionalmente. El mejor acompañamiento para una picada."
+                imagen="producto-vino.JPG"
+              />
+              <Producto
+                nombre="Conservas"
+                descripcion="Conservas dulces y saladas. Mermeladas y frutas en almibar, escabeches de carne y verdura, antipastos, verduras en vinagre y en aceite en módicas presentaciones de 1/4, 1/2 o 1kg. Consultar disponibilidad"
+                imagen="producto-conservasDulces.JPG"
+              />
+              <Producto
+                nombre="Tablas"
+                descripcion="Tablas de algarrobo curadas con cera de abeja. Artesanales, añorables y perpetuas."
+                imagen="producto-tablas.JPG"
+              />
+              <Producto
+                nombre="Licores"
+                descripcion="Licores y grapas. Bebidas alcohólicas de graduación considerable. Auyentan el frío y a Mandinga (o lo llaman, dependiendo de la hora y cantidad)."
+                imagen="producto-licores.JPG"
+              />
+              <Producto
+                nombre="Picadas"
+                descripcion="Infinitas combinaciones de fiambres, embutidos, quesos, conservas, vinos, risas, amistades, reuniones y encuentros."
+                imagen="producto-picada.JPG"
               />
             </div>
           </div>
@@ -159,7 +210,7 @@ export default function Inicio() {
 
             <div className="col-12 mt-5 mb-5 text-center">
               <div className="row contenedor-mapa">
-                <h1 className="mb-2 pasa-a-visitarnos">¡Pasá a visitarnos!</h1>
+                <h2 className="mt-2 mb-2 pasa-a-visitarnos">¡Pasá a visitarnos!</h2>
                 <p className="dias-horarios">Te esperamos en <b>Pedro Patat (S) 105</b>,</p>
                 <p>en la esquina de la plaza</p>
                 <iframe
