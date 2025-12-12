@@ -43,14 +43,26 @@ h1 {
   font-family: 'TempusSans';
 }
 
+h1::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(200px, 60vw, 500px);
+  height: clamp(200px, 60vw, 500px);
+  background-image: url('/pincelada2.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+  pointer-events: none;
+}
+
 h2 {
   font-family: 'TempusSans';
 }
 
-hr {
-  border: none;
-  border-top: 2px solid rgb(191, 184, 150);
-}
 
 /* Tamaño lg (992px en adelante) */
 @media (min-width: 992px) {
@@ -437,56 +449,16 @@ hr {
 }
 
 /* Productos */
-#productos {
-  padding: 0;
-  margin: 0;
-  min-height: auto;
-  height: 600px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-  width: 100%;
+#seccion-productos {
+  background-color: rgb(38, 36, 35);
 }
 
-.productos-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 2rem 1rem;
-  padding-top: 3rem;
+.productos-titulo::before {
+  background-image: url('/pincelada1.png');
 }
-
-.productos-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
-}
-
-.productos-background::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 2;
-}
-
-
 
 .productos-content {
-  background-color: rgb(38, 36, 35);
+  background-color: #423b33;
   padding: 2rem;
   border-radius: 8px;
   max-width: 600px;
@@ -494,6 +466,7 @@ hr {
   color: rgb(191, 184, 150);
   position: relative;
   z-index: 3;
+  margin: 0 auto;
 }
 
 .productos-content p {
@@ -525,6 +498,37 @@ hr {
 /* Esta sección fue removida del proyecto */
 
 /* Contacto */
+
+#seccion-contacto {
+  position: relative;
+  overflow: hidden;
+}
+
+.contacto-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.contacto-background::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+#seccion-contacto .container {
+  position: relative;
+  z-index: 3;
+}
 
 #contacto .col-lg-4 {
   display: flex;

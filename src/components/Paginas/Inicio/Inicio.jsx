@@ -68,25 +68,28 @@ export default function Inicio() {
       </section>
 
       <section id='seccion-productos'>
-        <div className="productos-container">
-          <img src="picada.JPG" className="productos-background" alt="Productos" />
-          <h1>Productos</h1>
-          <hr />
-          <div className="productos-content">
-            <p>Nos buscaste por los salames, pero te vamos a demostrar que somos más que una receta bonita...</p>
+        <div className="container pt-5 pb-5">
+          <div className="row">
+            <h1 className="productos-titulo">Productos</h1>
+            <hr className="mb-5" />
+            <div className="productos-content">
+              <p>Nos buscaste por los salames, pero te vamos a demostrar que somos más que una receta bonita...</p>
 
-            <p>Contamos con más de 5 mil millones de productos. Todos los fiambres son de elaboración propia, y te proponemos que los acompañes con los mejores productos regionales que vas a conseguir.</p>
+              <p>Contamos con más de 5 mil millones de productos. Todos los fiambres son de elaboración propia, y te proponemos que los acompañes con los mejores productos regionales que vas a conseguir.</p>
 
-            <p>Quesos, vinos, panes, aceitunas, escabeches... ¿hace falta seguir? Pasá, te invitamos a conocerlos</p>
+              <p>Quesos, vinos, panes, aceitunas, escabeches... ¿hace falta seguir? Pasá, te invitamos a conocerlos</p>
+            </div>
           </div>
+
         </div>
       </section>
 
       <section id="seccion-contacto">
+        <img src="picada.JPG" className="contacto-background" alt="Contacto" />
         <div className="container">
           <div className="row pt-5">
-            <h1>Contacto</h1>
-            <hr />
+            <h1 className="mt-4">Contacto</h1>
+            <hr className="mb-5" />
 
             <div className="col-12 col-lg-4">
               <div className="tarjeta-contacto">
@@ -123,7 +126,7 @@ export default function Inicio() {
 
             <div className="col-12 mt-5 mb-5 text-center">
               <h1 className="mb-2">¡Pasá a visitarnos!</h1>
-              <hr className="mb-4" />
+              <hr className="mb-5" />
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3419.112978758603!2d-64.06434402451416!3d-31.023101774445436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x943262648b67f569%3A0x769417cfbe265970!2sSabores%20de%20Caroya!5e0!3m2!1ses!2sar!4v1744626418366!5m2!1ses!2sar"
                 width="800" height="400"
