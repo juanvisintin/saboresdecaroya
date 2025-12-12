@@ -62,6 +62,10 @@ h3 {
   font-family: 'TempusSans';
 }
 
+.container {
+  padding: 0 1.5rem;
+}
+
 /* Tamaño lg (992px en adelante) */
 @media (min-width: 992px) {
   .container {
