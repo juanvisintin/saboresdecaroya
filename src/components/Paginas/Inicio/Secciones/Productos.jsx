@@ -1,4 +1,6 @@
-import Producto from "../Producto"
+import Producto from "../../../Producto"
+import "../../../../styles/Productos.css"
+import { Link } from "react-router-dom"
 
 export default function Productos() {
     return (
@@ -79,6 +81,14 @@ export default function Productos() {
                                 descripcion="Infinitas combinaciones de fiambres, embutidos, quesos, conservas, vinos, risas, amistades, reuniones y encuentros."
                                 imagen="producto-picada.JPG"
                             />
+                        </div>
+                    </div>
+
+                    <div className="row">
+                        <div className="col-12 text-center mt-5">
+                            <Link to="/productos" className="btn-ver-todos">
+                                Ver todos los productos
+                            </Link>
                         </div>
                     </div>
                 </div>

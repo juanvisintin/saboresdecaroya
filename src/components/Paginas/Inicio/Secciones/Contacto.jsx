@@ -1,3 +1,5 @@
+import "../../../../styles/Contacto.css"
+
 export default function Contacto() {
     return (
         <>

@@ -1,0 +1,165 @@
+/* Contacto */
+
+#seccion-contacto {
+  position: relative;
+  overflow: hidden;
+}
+
+.contacto-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.contacto-background::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+#seccion-contacto .container {
+  position: relative;
+  z-index: 3;
+}
+
+#contacto .col-lg-4 {
+  display: flex;
+}
+
+.tarjeta-contacto {
+  background-color: rgb(38, 36, 35);
+  padding: 1.25em 5em 3.5em 1.25em;
+  border-radius: 4px;
+  position: relative;
+  margin-bottom: 1.5em;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.tarjeta-contacto p {
+  text-align: left;
+}
+
+.tarjeta-contacto .foto {
+  position: absolute;
+  width: 30%;
+  right: 1.25em;
+  top: 1.25em;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.tarjeta-contacto hr {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  width: 50%;
+
+}
+
+/* Desktop - Breakpoint 1018px para Contacto */
+@media (min-width: 1018px) {
+  .tarjeta-contacto .foto {
+    width: 50%;
+  }
+}
+
+.texto {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.texto p {
+  margin-bottom: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+/* Desktop - Breakpoint 1018px para Contacto */
+@media (min-width: 1018px) {
+  .texto {
+    height: auto;
+  }
+
+  .texto p {
+    -webkit-line-clamp: unset;
+    line-clamp: unset;
+    overflow: visible;
+  }
+}
+
+/* Desktop - Breakpoint 1018px para Contacto */
+@media (min-width: 1018px) {
+  .tarjeta-contacto {
+    min-height: 200px;
+  }
+
+  .texto {
+    height: auto;
+  }
+
+  .texto p {
+    -webkit-line-clamp: unset;
+    line-clamp: unset;
+    overflow: visible;
+  }
+}
+
+.contenedor-mapa {
+  max-width: 100%;
+  background-color: rgb(38, 36, 35);
+  padding: 0.75rem;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+}
+
+.dias-horarios {
+  margin-bottom: 0;
+}
+
+.pasa-a-visitarnos {
+  font-size: 2.5rem;
+}
+
+.pasa-a-visitarnos::before {
+  background-image: none !important;
+}
+
+/* Desktop - Breakpoint 1018px para Contacto */
+@media (min-width: 1018px) {
+  #contacto-section {
+    padding: 65px 100px;
+  }
+
+  .col-lg-4 {
+    flex: 0 0 calc(33.333% - 0px);
+    max-width: calc(33.333% - 0px);
+  }
+}
+
+/* Mobile - Breakpoint menor a 1018px */
+@media (max-width: 1017px) {
+  .col-lg-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}

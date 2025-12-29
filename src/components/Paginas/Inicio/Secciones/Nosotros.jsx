@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import "../../../../styles/Nosotros.css"
 
 export default function Nosotros() {
     const [isMobile, setIsMobile] = useState(window.innerWidth < 768)

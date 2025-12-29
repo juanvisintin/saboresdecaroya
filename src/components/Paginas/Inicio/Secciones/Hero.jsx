@@ -1,4 +1,5 @@
-import Carrusel from "../Carrusel"
+import Carrusel from "../../../Carrusel"
+import "../../../../styles/Hero.css"
 
 export default function Hero() {
     return (
