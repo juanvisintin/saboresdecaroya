@@ -1,20 +1,11 @@
 import { useState, useEffect } from "react"
 import Producto from "./Producto"
 import Hero from "./Secciones/Hero"
+import Nosotros from "./Secciones/Nosotros"
 
 export default function Inicio() {
-  const [modalAbierto, setModalAbierto] = useState(false)
   const [cerrando, setCerrando] = useState(false)
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768)
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768)
-    }
-
-    window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
-  }, [])
+  const [modalAbierto, setModalAbierto] = useState(false)
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -27,12 +18,6 @@ export default function Inicio() {
     return () => window.removeEventListener('keydown', handleKeyDown)
   }, [modalAbierto])
 
-  const abrirModal = () => {
-    if (!isMobile) {
-      setModalAbierto(true)
-    }
-  }
-
   const cerrarModal = () => {
     setCerrando(true)
     setTimeout(() => {
@@ -44,38 +29,7 @@ export default function Inicio() {
   return (
     <>
       <Hero />
-      <section id="seccion-nosotros">
-        <div className="container">
-          <div className="row pt-5 pb-5" id='nosotros'>
-            <div className="col-12">
-              <h1>Sobre nosotros</h1>
-              <hr />
-            </div>
-            <div className="col-12 col-md-9">
-              <p>Sabores de Caroya es un emprendimiento familiar dedicado a la elaboración artesanal de alimentos tradicionales caroyenses, especializándose en el <b>Salame Típico de Colonia Caroya</b> y complementando este producto emblemático con exquisitos jamones, bondiolas, lomitos, dulces y conservas.</p>
-
-              <p>La calidad de las materias primas utilizadas, el cuidado en la elaboración y maduración y el tiempo de estacionamiento en sótanos de los mismos, garantizan una calidad y sabor inigualables.</p>
-
-              <p>No se utiliza ningún tipo de químicos ni aditivos artificiales durante la elaboración y conservación lo cual garantiza un producto natural y artesanal por excelencia.</p>
-            </div>
-
-            <div className="col-12 col-md-3">
-              {isMobile ? (
-                <img
-                  src="exterior-negocio.jpg"
-                  className="foto"
-                />
-              ) : (
-                <img
-                  src="exterior-negocio.jpg"
-                  className="foto"
-                  onClick={abrirModal}
-                />
-              )}
-            </div>
-          </div>
-        </div>
-      </section>
+      <Nosotros />
 
       <section id='seccion-productos'>
         <div className="container pt-5 pb-5">
