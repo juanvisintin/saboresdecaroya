@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
-import Producto from "../../Producto"
-import Carrusel from "../../Carrusel"
+import Producto from "./Producto"
+import Hero from "./Secciones/Hero"
 
 export default function Inicio() {
   const [modalAbierto, setModalAbierto] = useState(false)
@@ -43,17 +43,7 @@ export default function Inicio() {
 
   return (
     <>
-      <section id="seccion-hero">
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-12">
-              <Carrusel />
-            </div>
-          </div>
-        </div>
-      </section>
-
-
+      <Hero />
       <section id="seccion-nosotros">
         <div className="container">
           <div className="row pt-5 pb-5" id='nosotros'>
