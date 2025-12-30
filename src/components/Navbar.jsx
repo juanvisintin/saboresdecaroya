@@ -32,13 +32,13 @@ export default function Navbar() {
 
                 {/* Menú lateral */}
                 <div className={`nav-menu ${menuOpen ? 'activo' : ''}`}>
-                    <button onClick={() => scrollToSection('seccion-nosotros')} className="nav-link">
+                    <button onClick={() => scrollToSection('seccion-nosotros')} className="nav-link1">
                         Nosotros
                     </button>
-                    <button onClick={() => scrollToSection('seccion-productos')} className="nav-link">
+                    <button onClick={() => scrollToSection('seccion-productos')} className="nav-link1">
                         Productos
                     </button>
-                    <button onClick={() => scrollToSection('seccion-contacto')} className="nav-link">
+                    <button onClick={() => scrollToSection('seccion-contacto')} className="nav-link1">
                         Contacto
                     </button>
                 </div>

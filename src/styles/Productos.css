@@ -194,11 +194,7 @@
     #productos {
         height: 700px;
     }
-
-    .productos-titulo {
-        font-size: 3rem;
-    }
-
+    
     .productos-content {
         padding: 3rem;
     }

@@ -86,3 +86,10 @@
 .carrusel-punto:hover {
     background-color: rgb(119, 115, 94);
 }
+
+/* Mobile - Aumentar alto del carrusel */
+@media (max-width: 768px) {
+    .carrusel-imagenes {
+        padding-bottom: 60%;
+    }
+}

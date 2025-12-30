@@ -91,7 +91,7 @@
   left: 0;
 }
 
-.nav-link {
+.nav-link1 {
   font-family: 'TempusSans';
   background: none;
   border: none;
@@ -102,10 +102,10 @@
   padding: 15px 0;
   width: 100%;
   display: block;
-  font-size: 1.3frem;
+  font-size: 1.3rem;
 }
 
-.nav-link:hover {
+.nav-link1:hover {
   color: rgb(119, 115, 94);
   transition: ease 0.5s;
   background-color: rgba(119, 115, 94, 0.1);
@@ -142,16 +142,17 @@
     overflow-y: visible;
   }
 
-  .nav-link {
+  .nav-link1 {
     padding: 0;
     width: auto;
     display: inline-block;
     margin-right: 2.5rem;
     margin-left: 2.5rem;
     background-color: transparent;
+    font-size: 1rem;
   }
 
-  .nav-link:hover {
+  .nav-link1:hover {
     background-color: transparent;
     transform: scale(1.03);
   }
