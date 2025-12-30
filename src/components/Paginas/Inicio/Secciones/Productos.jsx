@@ -1,6 +1,5 @@
 import Producto from "../../../Producto"
 import "../../../../styles/Productos.css"
-import { Link } from "react-router-dom"
 
 export default function Productos() {
     return (
@@ -86,9 +85,7 @@ export default function Productos() {
 
                     <div className="row">
                         <div className="col-12 text-center mt-5">
-                            <Link to="/productos" className="btn-ver-todos">
-                                Ver todos los productos
-                            </Link>
+                            <a href="https://drive.google.com/file/d/16bT5rfunjpYWqm3uNwqjks5RLhnMDTGz/view?usp=sharing" className="btn-ver-todos" target="_blank">Ver todos los productos</a>
                         </div>
                     </div>
                 </div>
