@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 
 export default function Carrusel() {
     const [indiceActual, setIndiceActual] = useState(0)
-    const imagenes = ['hero1.png', 'hero2.JPG', 'hero3.JPG', 'hero4.JPG', 'hero5.JPG', 'hero6.JPG']
+    const imagenes = ['hero1.JPG', 'hero2.JPG', 'hero3.JPG', 'hero4.JPG', 'hero5.JPG', 'hero6.png']
 
     // Auto-cambio cada 5 segundos
     useEffect(() => {
