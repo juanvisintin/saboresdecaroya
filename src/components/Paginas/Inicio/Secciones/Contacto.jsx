@@ -43,8 +43,8 @@ export default function Contacto() {
                             </div>
                         </div>
 
-                        <div className="col-12 mt-5 mb-5 text-center">
-                            <div className="row contenedor-mapa">
+                        <div className="col-12">
+                            <div className="contenedor-mapa mt-5 mb-5 text-center">
                                 <h2 className="mt-2 mb-2 pasa-a-visitarnos">¡Pasá a visitarnos!</h2>
                                 <p className="dias-horarios">Te esperamos en <b>Pedro Patat (S) 105</b>,</p>
                                 <p>en la esquina de la plaza</p>
@@ -61,7 +61,6 @@ export default function Contacto() {
                                 <p className="dias-horarios"><b>Domingos</b></p>
                                 <p>De 9:00 a 14:00</p>
                             </div>
-
                         </div>
                     </div>
                 </div>
