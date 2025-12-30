@@ -59,13 +59,13 @@ export default function Nosotros() {
                             {isMobile ? (
                                 <img
                                     src="exterior-negocio.jpg"
-                                    className="foto"
+                                    className="foto" loading="lazy"
                                 />
                             ) : (
                                 <img
                                     src="exterior-negocio.jpg"
                                     className="foto"
-                                    onClick={abrirModal}
+                                    onClick={abrirModal} loading="lazy"
                                 />
                             )}
                         </div>
@@ -77,7 +77,7 @@ export default function Nosotros() {
             <div className={`modal-overlay ${modalAbierto ? 'activo' : ''} ${cerrando ? 'cerrando' : ''}`} onClick={cerrarModal}>
                 <div className="modal-contenido" onClick={(e) => e.stopPropagation()}>
                     <button className="modal-cerrar" onClick={cerrarModal}>&times;</button>
-                    <img src="exterior-negocio.jpg" className="modal-imagen" />
+                    <img src="exterior-negocio.jpg" className="modal-imagen" loading="lazy" />
                 </div>
             </div>
         </>

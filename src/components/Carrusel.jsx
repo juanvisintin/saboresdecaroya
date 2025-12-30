@@ -34,6 +34,7 @@ export default function Carrusel() {
                         src={imagen}
                         alt={`Hero ${indice + 1}`}
                         className={`carrusel-imagen ${indice === indiceActual ? 'activo' : ''}`}
+                        loading="lazy"
                     />
                 ))}
             </div>
