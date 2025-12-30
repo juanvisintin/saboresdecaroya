@@ -1,0 +1,162 @@
+.navbar1 {
+  background-color: rgb(38, 36, 35);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+  padding: 10px 20px;
+  position: relative;
+  z-index: 100;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 2rem;
+}
+
+.navbar-logo {
+  flex-shrink: 0;
+}
+
+.logo {
+  width: 100%;
+  max-width: 9.375em;
+  height: auto;
+}
+
+.navbar1 a {
+    text-decoration: none;
+    color: rgb(191, 184, 150);
+    transition: ease 0.3s;
+    margin-right: 2.5rem;
+    margin-left: 2.5rem;
+  }
+
+  .navbar1 a:hover {
+    color: rgb(119, 115, 94);
+    transition: ease 0.5s;
+    transform: scale(1.03);
+  }
+
+/* Hamburger menu - Solo visible en mobile */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 6px;
+  z-index: 101;
+}
+
+.hamburger-line {
+  width: 28px;
+  height: 3px;
+  background-color: rgb(191, 184, 150);
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.hamburger-line.open:nth-child(1) {
+  transform: rotate(45deg) translate(10px, 10px);
+}
+
+.hamburger-line.open:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-line.open:nth-child(3) {
+  transform: rotate(-45deg) translate(8px, -8px);
+}
+
+/* Menú lateral - Mobile */
+.nav-menu {
+  position: fixed;
+  left: -100%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(38, 36, 35);
+  width: 100%;
+  text-align: center;
+  transition: left 0.3s ease;
+  padding-top: 80px;
+  padding-bottom: 40px;
+  max-height: 100vh;
+  overflow-y: auto;
+  z-index: 99;
+}
+
+.nav-menu.activo {
+  left: 0;
+}
+
+.nav-link {
+  font-family: 'TempusSans';
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: rgb(191, 184, 150);
+  text-decoration: none;
+  transition: ease 0.3s;
+  padding: 15px 0;
+  width: 100%;
+  display: block;
+  font-size: 1.3frem;
+}
+
+.nav-link:hover {
+  color: rgb(119, 115, 94);
+  transition: ease 0.5s;
+  background-color: rgba(119, 115, 94, 0.1);
+}
+
+/* Overlay para cerrar menú */
+.nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 98;
+}
+
+/* Tablet - Breakpoint 768px */
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+
+  .nav-menu {
+    position: static;
+    left: 0;
+    display: flex;
+    width: auto;
+    flex-direction: row;
+    padding: 0;
+    background-color: transparent;
+    max-height: none;
+    transition: none;
+    gap: 0;
+    overflow-y: visible;
+  }
+
+  .nav-link {
+    padding: 0;
+    width: auto;
+    display: inline-block;
+    margin-right: 2.5rem;
+    margin-left: 2.5rem;
+    background-color: transparent;
+  }
+
+  .nav-link:hover {
+    background-color: transparent;
+    transform: scale(1.03);
+  }
+
+  .nav-overlay {
+    display: none;
+  }
+}

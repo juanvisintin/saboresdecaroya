@@ -1,0 +1,213 @@
+@font-face {
+  font-family: 'TempusSans';
+  src: url('/fonts/TEMPSITC.TTF') format('truetype');
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: clamp(12px, 2vw, 20px);
+  background-color: #50433b;
+  color: rgb(191, 184, 150);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(99, 116, 123);
+  transition: ease 0.3s;
+}
+
+a:hover {
+  color: rgb(59, 107, 128);
+  transition: ease 0.5s;
+}
+
+h1 {
+  font-family: 'TempusSans';
+  font-size: 4rem;
+  color: rgb(191, 184, 150);
+  margin-bottom: 0.5rem;
+  text-align: center;
+  position: relative;
+  z-index: 3;
+}
+
+h1::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(280px, 60vw, 500px);
+  height: clamp(200px, 60vw, 500px);
+  background-image: url('/pincelada2.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+  pointer-events: none;
+}
+
+h2, h3 {
+  font-family: 'TempusSans';
+}
+
+.container {
+  padding: 0 1.5rem;
+}
+
+/* Tamaño lg (992px en adelante) */
+@media (min-width: 992px) {
+  .container {
+    max-width: 850px;
+  }
+}
+
+/* Tamaño xl (1200px en adelante) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1000px;
+  }
+}
+
+/* Tamaño xxl (1400px en adelante) */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+
+/* Modal/Lightbox - Animaciones generales */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes zoomOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0);
+  pointer-events: none;
+}
+
+.modal-overlay.activo {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.8);
+  animation: fadeIn 0.3s ease forwards;
+  pointer-events: auto;
+}
+
+.modal-overlay.cerrando {
+  display: flex;
+  animation: fadeOut 0.3s ease forwards;
+  pointer-events: none;
+}
+
+/* Modal del componente Producto */
+.producto-card .modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-contenido {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  animation: zoomIn 0.4s ease-in-out;
+}
+
+.modal-overlay.cerrando .modal-contenido {
+  animation: zoomOut 0.4s ease-in-out;
+}
+
+.modal-imagen {
+  width: 100%;
+  max-width: 100%;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.modal-cerrar {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 40px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: ease 0.3s;
+  z-index: 10000;
+}
+
+.modal-cerrar:hover {
+  color: rgb(191, 184, 150);
+  transform: scale(1.2);
+}
+
+/* Pie */
+.pie {
+  font-family: 'TempusSans';
+  background-color: rgb(38, 36, 35);
+  padding: 10px;
+  color: rgb(119, 115, 94);
+}

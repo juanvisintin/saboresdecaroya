@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import "../styles/scrollToTop.css"
 
 export default function ScrollToTop() {
     const [mostrar, setMostrar] = useState(false)
