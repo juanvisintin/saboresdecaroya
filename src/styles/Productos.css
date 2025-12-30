@@ -1,294 +1,295 @@
 /* Productos */
 #seccion-productos {
-  background-color: rgb(38, 36, 35);
+    background-color: rgb(38, 36, 35);
 }
 
 .productos-titulo::before {
-  background-image: url('/pincelada1.png');
+    background-image: url('/pincelada1.png');
 }
 
 .productos-content {
-  background-color: #423b33;
-  padding: 2rem;
-  border-radius: 8px;
-  color: rgb(191, 184, 150);
-  position: relative;
-  z-index: 3;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+    background-color: #423b33;
+    padding: 2rem;
+    border-radius: 8px;
+    color: rgb(191, 184, 150);
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .productos-content p {
-  margin-bottom: 1.5rem;
-  line-height: 1.6;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
 }
 
 .productos-content p:last-child {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 /* Grid de Productos */
 .productos-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    width: 100%;
 }
 
 @media (min-width: 576px) {
-  .productos-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+    .productos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (min-width: 768px) {
-  .productos-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
+    .productos-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 @media (min-width: 1200px) {
-  .productos-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
+    .productos-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 /* Componente Producto */
 .producto-card {
-  position: relative;
-  overflow: visible;
-  border-radius: 8px;
-  cursor: pointer;
-  width: 100%;
-  margin: 0 auto;
-  background-color: #50433b;
-  display: flex;
-  flex-direction: column;
+    position: relative;
+    overflow: visible;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #50433b;
+    display: flex;
+    flex-direction: column;
 }
 
 .producto-imagen {
-  width: 100%;
-  aspect-ratio: 1;
-  object-fit: cover;
-  display: block;
-  transition: opacity 0.3s ease;
-  border-radius: 8px;
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    display: block;
+    transition: opacity 0.3s ease;
+    border-radius: 8px;
 }
 
 .producto-card[data-hover="true"] .producto-imagen {
-  opacity: 0.4;
+    opacity: 0.4;
 }
 
 .producto-overlay {
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  border-radius: 8px;
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 8px;
 }
 
 .producto-card[data-hover="true"] .producto-overlay {
-  opacity: 1;
+    opacity: 1;
 }
 
 .producto-ver-mas {
-  color: rgb(191, 184, 150);
-  font-family: 'TempusSans';
-  font-size: 1rem;
-  text-align: center;
-  margin: 0;
-  padding: 0;
+    color: rgb(191, 184, 150);
+    font-family: 'TempusSans';
+    font-size: 1rem;
+    text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 .producto-nombre {
-  color: rgb(191, 184, 150);
-  font-family: 'TempusSans';
-  font-size: 1.3rem;
-  text-align: center;
-  padding: 1rem;
-  margin: 0;
-  line-height: 1.3;
+    color: rgb(191, 184, 150);
+    font-family: 'TempusSans';
+    font-size: 1.3rem;
+    text-align: center;
+    padding: 1rem;
+    margin: 0;
+    line-height: 1.3;
 }
 
 .producto-btn {
-  display: none;
+    display: none;
 }
 
 .modal-contenedor-producto {
-  background-color: rgb(38, 36, 35);
-  border-radius: 12px;
-  overflow: hidden;
-  max-width: 90vw;
-  max-height: 90vh;
-  display: flex;
-  flex-direction: column;
-  animation: zoomIn 0.3s ease;
-  z-index: 10000;
+    background-color: rgb(38, 36, 35);
+    border-radius: 12px;
+    overflow: hidden;
+    max-width: 90vw;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    animation: zoomIn 0.3s ease;
+    z-index: 10000;
 }
 
 .modal-contenedor-producto.vertical {
-  flex-direction: column;
+    flex-direction: column;
 }
 
 .modal-contenedor-producto.horizontal {
-  flex-direction: row;
+    flex-direction: row;
 }
 
 .modal-imagen-producto {
-  width: 100%;
-  height: auto;
-  display: block;
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .modal-contenedor-producto.vertical .modal-imagen-producto {
-  max-height: 50vh;
-  object-fit: cover;
+    max-height: 50vh;
+    object-fit: cover;
 }
 
 .modal-contenedor-producto.horizontal .modal-imagen-producto {
-  width: 50%;
-  height: auto;
-  max-height: 80vh;
-  object-fit: cover;
+    width: 50%;
+    height: auto;
+    max-height: 80vh;
+    object-fit: cover;
 }
 
 .modal-info-producto {
-  padding: 2rem 1.5rem;
-  color: rgb(191, 184, 150);
-  overflow-y: auto;
+    padding: 2rem 1.5rem;
+    color: rgb(191, 184, 150);
+    overflow-y: auto;
 }
 
 .modal-contenedor-producto.vertical .modal-info-producto {
-  max-height: 40vh;
+    max-height: 40vh;
 }
 
 .modal-contenedor-producto.horizontal .modal-info-producto {
-  width: 50%;
-  max-height: 80vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+    width: 50%;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .modal-info-producto h2 {
-  font-family: 'TempusSans';
-  margin-top: 0;
-  margin-bottom: 1rem;
-  color: rgb(191, 184, 150);
-  font-size: clamp(1.2rem, 5vw, 1.8rem);
+    font-family: 'TempusSans';
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: rgb(191, 184, 150);
+    font-size: clamp(1.2rem, 5vw, 1.8rem);
 }
 
 .modal-info-producto p {
-  margin: 0;
-  line-height: 1.6;
-  font-size: clamp(0.9rem, 3vw, 1rem);
+    margin: 0;
+    line-height: 1.6;
+    font-size: clamp(0.9rem, 3vw, 1rem);
 }
 
 /* Desktop - Breakpoint 768px */
 @media (min-width: 768px) {
-  #productos {
-    height: 700px;
-  }
+    #productos {
+        height: 700px;
+    }
 
-  .productos-titulo {
-    font-size: 3rem;
-  }
+    .productos-titulo {
+        font-size: 3rem;
+    }
 
-  .productos-content {
-    padding: 3rem;
-  }
+    .productos-content {
+        padding: 3rem;
+    }
 }
+
 /* Botón Ver Todos los Productos */
 .btn-ver-todos {
-  display: inline-block;
-  padding: 1rem 2.5rem;
-  font-family: 'TempusSans';
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: rgb(191, 184, 150);
-  background-color: rgb(38, 36, 35);
-  border: 2px solid rgb(191, 184, 150);
-  border-radius: 8px;
-  text-decoration: none;
-  text-align: center;
-  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    font-family: 'TempusSans';
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: rgb(191, 184, 150);
+    background-color: rgb(38, 36, 35);
+    border: 2px solid rgb(191, 184, 150);
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
 }
 
 .btn-ver-todos::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background-color: rgb(191, 184, 150);
-  transition: left 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  z-index: -1;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(191, 184, 150);
+    transition: left 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    z-index: -1;
 }
 
 .btn-ver-todos:hover {
-  color: rgb(38, 36, 35);
-  box-shadow: 0 8px 24px rgba(191, 184, 150, 0.3);
-  transform: translateY(-3px);
+    color: rgb(38, 36, 35);
+    box-shadow: 0 8px 24px rgba(191, 184, 150, 0.3);
+    transform: translateY(-3px);
 }
 
 .btn-ver-todos:hover::before {
-  left: 0;
+    left: 0;
 }
 
 .btn-ver-todos:active {
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(191, 184, 150, 0.2);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(191, 184, 150, 0.2);
 }
 
 /* Botón Volver al Inicio */
 .btn-volver-inicio {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.75rem 1.5rem;
-  font-family: 'TempusSans';
-  font-size: 1rem;
-  color: rgb(191, 184, 150);
-  background-color: transparent;
-  border: 2px solid rgb(191, 184, 150);
-  border-radius: 6px;
-  text-decoration: none;
-  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  position: relative;
-  overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    font-family: 'TempusSans';
+    font-size: 1rem;
+    color: rgb(191, 184, 150);
+    background-color: transparent;
+    border: 2px solid rgb(191, 184, 150);
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
 }
 
 .btn-volver-inicio::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background-color: rgb(191, 184, 150);
-  transition: left 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  z-index: -1;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(191, 184, 150);
+    transition: left 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    z-index: -1;
 }
 
 .btn-volver-inicio:hover {
-  color: rgb(38, 36, 35);
-  box-shadow: 0 4px 12px rgba(191, 184, 150, 0.25);
-  transform: translateX(4px);
+    color: rgb(38, 36, 35);
+    box-shadow: 0 4px 12px rgba(191, 184, 150, 0.25);
+    transform: translateX(4px);
 }
 
 .btn-volver-inicio:hover::before {
-  left: 0;
+    left: 0;
 }
 
 .btn-volver-inicio:active {
-  transform: translateX(2px);
+    transform: translateX(2px);
 }

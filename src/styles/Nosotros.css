@@ -1,76 +1,76 @@
 /* Nosotros */
 #nosotros {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 #nosotros .col-12 {
-  width: 100%;
+    width: 100%;
 }
 
 #nosotros .col-md-9 {
-  order: 1;
-  margin-bottom: 2rem;
+    order: 1;
+    margin-bottom: 2rem;
 }
 
 #nosotros .col-md-3 {
-  order: 2;
-  margin-bottom: 2rem;
+    order: 2;
+    margin-bottom: 2rem;
 }
 
 #nosotros .foto {
-  width: 100%;
-  height: auto;
-  border-radius: 4px;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
-  transition: ease 0.3s;
-  cursor: default;
-  display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    transition: ease 0.3s;
+    cursor: default;
+    display: block;
 }
 
 #nosotros .foto:hover {
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
-  transition: ease 0.3s;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    transition: ease 0.3s;
 }
 
 /* Desktop - Breakpoint 768px */
 @media (min-width: 768px) {
-  #nosotros {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 1rem;
-    align-items: start;
-  }
+    #nosotros {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+        align-items: start;
+    }
 
-  #nosotros .col-12 {
-    grid-column: 1 / -1;
-  }
+    #nosotros .col-12 {
+        grid-column: 1 / -1;
+    }
 
-  #nosotros .col-md-9 {
-    order: 0;
-    margin-bottom: 0;
-    grid-column: 1;
-    grid-row: 3;
-  }
+    #nosotros .col-md-9 {
+        order: 0;
+        margin-bottom: 0;
+        grid-column: 1;
+        grid-row: 3;
+    }
 
-  #nosotros .col-md-3 {
-    order: 0;
-    margin-bottom: 0;
-    grid-column: 2;
-    grid-row: 3;
-    max-width: 400px;
-    margin-left: auto;
-    padding-right: 0;
-  }
+    #nosotros .col-md-3 {
+        order: 0;
+        margin-bottom: 0;
+        grid-column: 2;
+        grid-row: 3;
+        max-width: 400px;
+        margin-left: auto;
+        padding-right: 0;
+    }
 
-  #nosotros .foto {
-    cursor: pointer;
-    width: 100%;
-    margin: 0;
-  }
+    #nosotros .foto {
+        cursor: pointer;
+        width: 100%;
+        margin: 0;
+    }
 
-  #nosotros .foto:hover {
-    box-shadow: 20px 20px 25px rgba(0, 0, 0, 0.5);
-    transform: scale(1.05);
-  }
+    #nosotros .foto:hover {
+        box-shadow: 20px 20px 25px rgba(0, 0, 0, 0.5);
+        transform: scale(1.05);
+    }
 }
