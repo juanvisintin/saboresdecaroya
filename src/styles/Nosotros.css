@@ -74,3 +74,195 @@
         transform: scale(1.05);
     }
 }
+
+/* Botón conoce mas viejo
+.btn-conoce-mas {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    font-family: 'TempusSans';
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: rgb(191, 184, 150);
+    background-color: rgb(38, 36, 35);
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.btn-conoce-mas::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(191, 184, 150);
+    transition: left 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    z-index: -1;
+}
+
+.btn-conoce-mas:hover {
+    color: rgb(38, 36, 35);
+    box-shadow: 0 8px 24px rgba(191, 184, 150, 0.3);
+    transform: translateY(-3px);
+}
+
+.btn-conoce-mas:hover::before {
+    left: 0;
+}
+
+.btn-conoce-mas:active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(191, 184, 150, 0.2);
+}
+*/
+
+/* conoce mas
+.btn-conoce-mas {
+ position: relative;
+ display: inline-block;
+ cursor: pointer;
+ outline: none;
+ border: 0;
+ vertical-align: middle;
+ text-decoration: none;
+ background: transparent;
+ padding: 0;
+ font-family: 'TempusSans';
+ width: 14rem;
+}
+
+.btn-conoce-mas .circulo {
+ transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+ position: relative;
+ display: block;
+ margin: 0;
+ width: 3rem;
+ height: 3rem;
+ background: #262423;
+ border-radius: 1.625rem;
+}
+
+.btn-conoce-mas .circulo .icono {
+ transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+ position: absolute;
+ top: 0;
+ bottom: 0;
+ margin: auto;
+ background: #BFB896;
+}
+
+.btn-conoce-mas .circulo .icono.arrow {
+ transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+ left: 0.625rem;
+ width: 1.125rem;
+ height: 0.125rem;
+ background: none;
+}
+
+.btn-conoce-mas .circulo .icono.arrow::before {
+ position: absolute;
+ content: "";
+ top: -0.29rem;
+ right: 0.0625rem;
+ width: 0.625rem;
+ height: 0.625rem;
+ border-top: 0.125rem solid #BFB896;
+ border-right: 0.125rem solid #BFB896;
+ transform: rotate(45deg);
+}
+
+.btn-conoce-mas .btn-texto {
+ transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ padding: 0.75rem 0;
+ margin: 0 0 0 1.85rem;
+ color: #BFB896;
+ font-weight: 700;
+ line-height: 1.6;
+ text-align: center;
+}
+
+.btn-conoce-mas:hover .circulo {
+ width: 100%;
+}
+
+.btn-conoce-mas:hover .circulo .icono.arrow {
+ background: #BFB896;
+ transform: translate(1rem, 0);
+}
+
+.btn-conoce-mas:hover .btn-texto {
+ color: #BFB896;
+}
+*/
+
+.btn-conoce-mas {
+  --primary-color: #262423;
+  --secondary-color: #BFB896;
+  --hover-color: #111;
+  --arrow-width: 10px;
+  --arrow-stroke: 2px;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 20px;
+  color: var(--secondary-color);
+  padding: 1em 1.8em;
+  background: var(--primary-color);
+  display: flex;
+  transition: 0.2s background;
+  align-items: center;
+  gap: 0.6em;
+  font-weight: 600;
+  font-family: "TempusSans";
+}
+
+.btn-conoce-mas .arrow-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-conoce-mas .arrow {
+  margin-top: 1px;
+  width: var(--arrow-width);
+  background: var(--primary-color);
+  height: var(--arrow-stroke);
+  position: relative;
+  transition: 0.2s;
+}
+
+.btn-conoce-mas .arrow::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  border: solid var(--secondary-color);
+  border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+  display: inline-block;
+  top: -3px;
+  right: 3px;
+  transition: 0.2s;
+  padding: 3px;
+  transform: rotate(-45deg);
+}
+
+.btn-conoce-mas:hover {
+  background-color: var(--hover-color);
+}
+
+.btn-conoce-mas:hover .arrow {
+  background: var(--secondary-color);
+}
+
+.btn-conoce-mas:hover .arrow:before {
+  right: 0;
+}

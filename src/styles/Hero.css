@@ -37,18 +37,20 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: transparent;
-    color: rgb(255, 255, 255);
+    background-color: rgba(80, 67, 59, 0.5);
+    color: #BFB896;
     border: none;
+    border-radius: 0.5rem;
     font-size: 1.5rem;
     padding: 0.5rem 0.75rem;
     cursor: pointer;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, background-color 0.3s ease;
     z-index: 10;
 }
 
 .carrusel-btn:hover {
-    color: rgb(119, 115, 94);
+    color: #BFB896;
+    background-color: rgba(80, 67, 59, 1);
 }
 
 .carrusel-btn-anterior {
@@ -66,25 +68,33 @@
     transform: translateX(-50%);
     display: flex;
     gap: 0.5rem;
+    background-color: rgba(80, 67, 59, 0.1);
+    padding: 0.5rem 0.75rem;
+    border-radius: 1rem;
+    transition: background-color 0.3s ease;
     z-index: 10;
+}
+
+.carrusel-indicadores:hover {
+    background-color: rgba(80, 67, 59, 1);
 }
 
 .carrusel-punto {
     height: 1rem;
     transform: scale(0.6);
     border-radius: 1rem;
-    border: 0.15rem solid rgb(255, 255, 255);
+    border: 0.15rem solid #BFB896;
     background-color: transparent;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .carrusel-punto.activo {
-    background-color: rgb(255, 255, 255);
+    background-color: #BFB896;
 }
 
 .carrusel-punto:hover {
-    background-color: rgb(119, 115, 94);
+    background-color: #BFB896;
 }
 
 /* Mobile - Aumentar alto del carrusel */

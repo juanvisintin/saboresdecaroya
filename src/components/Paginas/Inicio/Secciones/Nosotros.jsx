@@ -53,7 +53,14 @@ export default function Nosotros() {
                             <p>La calidad de las materias primas utilizadas, el cuidado en la elaboración y maduración y el tiempo de estacionamiento en sótanos de los mismos, garantizan una calidad y sabor inigualables.</p>
 
                             <p>No se utiliza ningún tipo de químicos ni aditivos artificiales durante la elaboración y conservación lo cual garantiza un producto natural y artesanal por excelencia.</p>
+                            <button className="btn-conoce-mas mt-4">
+                                Conocé más
+                                <div className="arrow-wrapper">
+                                    <div className="arrow"></div>
+                                </div>
+                            </button>
                         </div>
+
 
                         <div className="col-12 col-md-3">
                             {isMobile ? (

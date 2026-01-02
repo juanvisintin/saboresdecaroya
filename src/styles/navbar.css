@@ -26,18 +26,47 @@
   height: auto;
 }
 
-.navbar1 a {
-  text-decoration: none;
-  color: rgb(191, 184, 150);
-  transition: ease 0.3s;
+.nav-link1 {
+  color: #BFB896;
+  font-family: "TempusSans";
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background: none;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 800ms;
+  transition-property: color;
   margin-right: 2.5rem;
   margin-left: 2.5rem;
+  font-size: 1.6rem;
+  width: fit-content;
+  display: inline-block;
+  white-space: nowrap;
 }
 
-.navbar1 a:hover {
-  color: rgb(119, 115, 94);
-  transition: ease 0.5s;
-  transform: scale(1.03);
+.nav-link1:focus,
+.nav-link1:hover {
+  color: #dfd7ad;
+}
+
+.nav-link1:focus:after,
+.nav-link1:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.nav-link1:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  background-color: #dfd7ad;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 800ms;
+  transition-property: width, left;
 }
 
 /* Hamburger menu - Solo visible en mobile */
@@ -76,6 +105,7 @@
   top: 0;
   display: flex;
   flex-direction: column;
+  align-items: center;
   background-color: rgb(38, 36, 35);
   width: 100%;
   text-align: center;
@@ -89,26 +119,6 @@
 
 .nav-menu.activo {
   left: 0;
-}
-
-.nav-link1 {
-  font-family: 'TempusSans';
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: rgb(191, 184, 150);
-  text-decoration: none;
-  transition: ease 0.3s;
-  padding: 15px 0;
-  width: 100%;
-  display: block;
-  font-size: 1.3rem;
-}
-
-.nav-link1:hover {
-  color: rgb(119, 115, 94);
-  transition: ease 0.5s;
-  background-color: rgba(119, 115, 94, 0.1);
 }
 
 /* Overlay para cerrar menú */
@@ -143,17 +153,7 @@
   }
 
   .nav-link1 {
-    padding: 0;
-    width: auto;
-    display: inline-block;
-    margin-right: 2.5rem;
-    margin-left: 2.5rem;
-    background-color: transparent;
-  }
-
-  .nav-link1:hover {
-    background-color: transparent;
-    transform: scale(1.03);
+    font-size: 1.3rem;
   }
 
   .nav-overlay {

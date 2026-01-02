@@ -84,10 +84,19 @@ export default function Productos() {
                     </div>
 
                     <div className="row">
-                        <div className="col-12 text-center mt-5">
-                            <a href="https://drive.google.com/file/d/16bT5rfunjpYWqm3uNwqjks5RLhnMDTGz/view?usp=sharing" className="btn-ver-todos" target="_blank">Todos los productos y lista de precios</a>
+                        <div className="col-12 mt-5 text-center">
+                            <button 
+                                className="btn-todos-los-productos"
+                                onClick={() => window.open('https://drive.google.com/file/d/16bT5rfunjpYWqm3uNwqjks5RLhnMDTGz/view?usp=sharing', '_blank')}
+                            >
+                                Todos los productos y lista de precios
+                                <div className="arrow-wrapper">
+                                    <div className="arrow"></div>
+                                </div>
+                            </button>
                         </div>
                     </div>
+
                 </div>
             </section >
         </>
