@@ -85,7 +85,7 @@ export default function Productos() {
 
                     <div className="row">
                         <div className="col-12 mt-5 text-center">
-                            <button 
+                            <button
                                 className="btn-todos-los-productos"
                                 onClick={() => window.open('https://drive.google.com/file/d/16bT5rfunjpYWqm3uNwqjks5RLhnMDTGz/view?usp=sharing', '_blank')}
                             >

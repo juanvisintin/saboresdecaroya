@@ -194,7 +194,7 @@
     #productos {
         height: 700px;
     }
-    
+
     .productos-content {
         padding: 3rem;
     }
@@ -202,63 +202,63 @@
 
 /* Botón todos los productos */
 .btn-todos-los-productos {
-  --primary-color: #50433b;
-  --secondary-color: #BFB896;
-  --hover-color: #111;
-  --arrow-width: 10px;
-  --arrow-stroke: 2px;
-  box-sizing: border-box;
-  border: 0;
-  border-radius: 20px;
-  color: var(--secondary-color);
-  padding: 1em 1.8em;
-  background: var(--primary-color);
-  display: flex;
-  transition: 0.2s background;
-  align-items: center;
-  gap: 0.6em;
-  font-weight: 600;
-  font-family: "TempusSans";
-  margin: 0 auto;
+    --primary-color: #50433b;
+    --secondary-color: #BFB896;
+    --hover-color: #111;
+    --arrow-width: 10px;
+    --arrow-stroke: 2px;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 20px;
+    color: var(--secondary-color);
+    padding: 1em 1.8em;
+    background: var(--primary-color);
+    display: flex;
+    transition: 0.2s background;
+    align-items: center;
+    gap: 0.6em;
+    font-weight: 600;
+    font-family: "TempusSans";
+    margin: 0 auto;
 }
 
 .btn-todos-los-productos .arrow-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .btn-todos-los-productos .arrow {
-  margin-top: 1px;
-  width: var(--arrow-width);
-  background: var(--primary-color);
-  height: var(--arrow-stroke);
-  position: relative;
-  transition: 0.2s;
+    margin-top: 1px;
+    width: var(--arrow-width);
+    background: var(--primary-color);
+    height: var(--arrow-stroke);
+    position: relative;
+    transition: 0.2s;
 }
 
 .btn-todos-los-productos .arrow::before {
-  content: "";
-  box-sizing: border-box;
-  position: absolute;
-  border: solid var(--secondary-color);
-  border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
-  display: inline-block;
-  top: -3px;
-  right: 3px;
-  transition: 0.2s;
-  padding: 3px;
-  transform: rotate(-45deg);
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    border: solid var(--secondary-color);
+    border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+    display: inline-block;
+    top: -3px;
+    right: 3px;
+    transition: 0.2s;
+    padding: 3px;
+    transform: rotate(-45deg);
 }
 
 .btn-todos-los-productos:hover {
-  background-color: var(--hover-color);
+    background-color: var(--hover-color);
 }
 
 .btn-todos-los-productos:hover .arrow {
-  background: var(--secondary-color);
+    background: var(--secondary-color);
 }
 
 .btn-todos-los-productos:hover .arrow:before {
-  right: 0;
+    right: 0;
 }
