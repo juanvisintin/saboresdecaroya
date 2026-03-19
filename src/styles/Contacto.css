@@ -1,8 +1,15 @@
 /* Contacto */
-
 #seccion-contacto {
     position: relative;
     overflow: hidden;
+}
+
+#seccion-contacto a {
+    color: #BFB896;
+    text-decoration: none;
+    background-color: #50433b;
+    padding: 0.5rem;
+    border-radius: 1rem;
 }
 
 .contacto-background {

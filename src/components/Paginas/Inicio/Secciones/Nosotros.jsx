@@ -44,7 +44,7 @@ export default function Nosotros() {
                 <div className="container">
                     <div className="row pt-5 pb-5" id='nosotros'>
                         <div className="col-12">
-                            <h1>Sobre nosotros</h1>
+                            <h1>Nosotros</h1>
                             <hr />
                         </div>
                         <div className="col-12 col-md-9">

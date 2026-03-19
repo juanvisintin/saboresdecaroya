@@ -6,30 +6,18 @@
 
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: clamp(12px, 2vw, 20px);
+  font-size: clamp(1rem, 1rem + 0.5vw, 1.25rem);
   background-color: #50433b;
   color: #BFB896; 
-  /* color: rgb(227, 221, 207); contraste mas alto*/
   margin: 0;
   padding: 0;
   overflow-x: hidden;
 }
 
-a {
-  text-decoration: none;
-  color: rgb(99, 116, 123);
-  transition: ease 0.3s;
-}
-
-a:hover {
-  color: rgb(59, 107, 128);
-  transition: ease 0.5s;
-}
-
 h1 {
   font-family: 'TempusSans';
   font-size: clamp(2rem, 8vw, 4rem);
-  color: rgb(191, 184, 150);
+  color: #BFB896;
   margin-bottom: 0.5rem;
   text-align: center;
   position: relative;
@@ -52,8 +40,7 @@ h1::before {
   pointer-events: none;
 }
 
-h2,
-h3 {
+h2, h3 {
   font-family: 'TempusSans';
 }
 
@@ -81,7 +68,6 @@ h3 {
     max-width: 1200px;
   }
 }
-
 
 /* Modal/Lightbox - Animaciones generales */
 @keyframes fadeIn {
@@ -210,7 +196,7 @@ h3 {
 /* Pie */
 .pie {
   font-family: 'TempusSans';
-  background-color: rgb(38, 36, 35);
-  padding: 10px;
-  color: rgb(119, 115, 94);
+  background-color: #262423;
+  padding: 1rem;
+  color: #BFB896;
 }
