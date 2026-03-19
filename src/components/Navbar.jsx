@@ -1,20 +1,20 @@
-import { useState } from "react"
+import { useState, useCallback } from "react"
 import "../styles/navbar.css"
 
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false)
 
-    const scrollToSection = (sectionId) => {
+    const toggleMenu = useCallback(() => {
+        setMenuOpen(prev => !prev)
+    }, [])
+
+    const scrollToSection = useCallback((sectionId) => {
         const element = document.getElementById(sectionId)
         if (element) {
             element.scrollIntoView({ behavior: 'smooth' })
         }
         setMenuOpen(false)
-    }
-
-    const toggleMenu = () => {
-        setMenuOpen(!menuOpen)
-    }
+    }, [])
 
     return (
         <nav className="navbar1">

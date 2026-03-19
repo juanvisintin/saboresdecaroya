@@ -1,10 +1,22 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 
 export default function Producto({ nombre, descripcion, imagen }) {
     const [modalAbierto, setModalAbierto] = useState(false)
     const [cerrando, setCerrando] = useState(false)
     const [hover, setHover] = useState(false)
     const [isSmall, setIsSmall] = useState(window.innerWidth < 576)
+
+    const abrirModal = useCallback(() => {
+        setModalAbierto(true)
+    }, [])
+
+    const cerrarModal = useCallback(() => {
+        setCerrando(true)
+        setTimeout(() => {
+            setModalAbierto(false)
+            setCerrando(false)
+        }, 300)
+    }, [])
 
     useEffect(() => {
         const handleResize = () => {
@@ -24,19 +36,7 @@ export default function Producto({ nombre, descripcion, imagen }) {
 
         window.addEventListener('keydown', handleKeyDown)
         return () => window.removeEventListener('keydown', handleKeyDown)
-    }, [modalAbierto])
-
-    const abrirModal = () => {
-        setModalAbierto(true)
-    }
-
-    const cerrarModal = () => {
-        setCerrando(true)
-        setTimeout(() => {
-            setModalAbierto(false)
-            setCerrando(false)
-        }, 300)
-    }
+    }, [modalAbierto, cerrarModal])
 
     return (
         <>

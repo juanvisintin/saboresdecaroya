@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import "../../../../styles/Nosotros.css"
 
 export default function Nosotros() {
@@ -6,37 +6,37 @@ export default function Nosotros() {
     const [modalAbierto, setModalAbierto] = useState(false)
     const [cerrando, setCerrando] = useState(false)
 
+    const abrirModal = useCallback(() => {
+        setModalAbierto(true)
+    }, [])
+
+    const cerrarModal = useCallback(() => {
+        setCerrando(true)
+        setTimeout(() => {
+            setModalAbierto(false)
+            setCerrando(false)
+        }, 300)
+    }, [])
+
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth < 768)
         }
 
-        window.addEventListener('resize', handleResize)
-        return () => window.removeEventListener('resize', handleResize)
-    }, [])
-
-    const abrirModal = () => {
-        setModalAbierto(true)
-    }
-
-    useEffect(() => {
         const handleKeyDown = (e) => {
             if (e.key === 'Escape' && modalAbierto) {
                 cerrarModal()
             }
         }
 
+        window.addEventListener('resize', handleResize)
         window.addEventListener('keydown', handleKeyDown)
-        return () => window.removeEventListener('keydown', handleKeyDown)
-    }, [modalAbierto])
 
-    const cerrarModal = () => {
-        setCerrando(true)
-        setTimeout(() => {
-            setModalAbierto(false)
-            setCerrando(false)
-        }, 300)
-    }
+        return () => {
+            window.removeEventListener('resize', handleResize)
+            window.removeEventListener('keydown', handleKeyDown)
+        }
+    }, [modalAbierto, cerrarModal])
 
     return (
         <>

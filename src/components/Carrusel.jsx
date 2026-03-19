@@ -11,7 +11,7 @@ export default function Carrusel() {
         }, 5000)
 
         return () => clearInterval(intervalo)
-    }, [indiceActual, imagenes.length])
+    }, [])
 
     const irAlAnterior = () => {
         setIndiceActual((prev) => (prev - 1 + imagenes.length) % imagenes.length)
