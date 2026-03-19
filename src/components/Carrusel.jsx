@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 
 export default function Carrusel() {
     const [indiceActual, setIndiceActual] = useState(0)
-    const imagenes = ['hero1.JPG', 'hero2.JPG', 'hero3.JPG', 'hero4.JPG', 'hero5.JPG', 'hero6.png']
+    const imagenes = ['hero1.webp', 'hero2.webp', 'hero3.webp', 'hero5.webp', 'hero6.webp']
 
     // Auto-cambio cada 5 segundos
     useEffect(() => {
@@ -34,7 +34,7 @@ export default function Carrusel() {
                         src={imagen}
                         alt={`Hero ${indice + 1}`}
                         className={`carrusel-imagen ${indice === indiceActual ? 'activo' : ''}`}
-                        loading="lazy"
+                        fetchpriority="high"
                     />
                 ))}
             </div>

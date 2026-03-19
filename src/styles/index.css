@@ -32,7 +32,7 @@ h1::before {
   transform: translate(-50%, -50%);
   width: clamp(280px, 60vw, 500px);
   height: clamp(200px, 60vw, 500px);
-  background-image: url('/pincelada2.png');
+  background-image: url('/pincelada2.webp');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;

@@ -20,7 +20,7 @@ export default function Navbar() {
         <nav className="navbar1">
             <div className="navbar-container">
                 <div className="navbar-logo">
-                    <img src="/icon2.png" className="logo" alt="Logo" loading="lazy" />
+                    <img src="/icon2.webp" className="logo" alt="Logo" loading="lazy" />
                 </div>
 
                 {/* Hamburger menu para mobile */}

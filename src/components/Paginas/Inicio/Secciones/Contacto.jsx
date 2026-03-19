@@ -4,7 +4,7 @@ export default function Contacto() {
     return (
         <>
             <section id="seccion-contacto">
-                <img src="picada.JPG" className="contacto-background" alt="Contacto" loading="lazy" />
+                <img src="picada.webp" className="contacto-background" alt="Contacto" loading="lazy" />
                 <div className="container">
                     <div className="row pt-5">
                         <h1 className="mt-4">Contacto</h1>
@@ -12,7 +12,7 @@ export default function Contacto() {
 
                         <div className="col-12 col-lg-4">
                             <div className="tarjeta-contacto">
-                                <img src="contacto-wpp.png" className="foto" loading="lazy" />
+                                <img src="contacto-wpp.webp" className="foto" loading="lazy" />
                                 <div className="texto">
                                     <h2>WhatsApp</h2>
                                     <hr />
@@ -23,7 +23,7 @@ export default function Contacto() {
 
                         <div className="col-12 col-lg-4">
                             <div className="tarjeta-contacto">
-                                <img src="contacto-instagram.png" className="foto" loading="lazy" />
+                                <img src="contacto-instagram.webp" className="foto" loading="lazy" />
                                 <div className="texto">
                                     <h2>Instagram</h2>
                                     <hr />
@@ -34,7 +34,7 @@ export default function Contacto() {
 
                         <div className="col-12 col-lg-4">
                             <div className="tarjeta-contacto">
-                                <img src="contacto-telefono.png" className="foto" loading="lazy" />
+                                <img src="contacto-telefono.webp" className="foto" loading="lazy" />
                                 <div className="texto">
                                     <h2>Teléfono</h2>
                                     <hr />
