@@ -96,6 +96,9 @@ export default function Productos() {
 
                     <div className="row">
                         <div className="col-12 mt-5 text-center">
+                            
+                            {/* BOTÓN VER TODOS LOS PRODUCTOS Y LISTA DE PRECIOS
+                            
                             <button
                                 className="btn-todos-los-productos"
                                 onClick={() => window.open('https://drive.google.com/file/d/16bT5rfunjpYWqm3uNwqjks5RLhnMDTGz/view?usp=sharing', '_blank')}
@@ -104,7 +107,8 @@ export default function Productos() {
                                 <div className="arrow-wrapper">
                                     <div className="arrow"></div>
                                 </div>
-                            </button>
+                            </button> */}
+
                         </div>
                     </div>
 

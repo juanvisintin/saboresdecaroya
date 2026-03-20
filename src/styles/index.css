@@ -200,3 +200,44 @@ h2, h3 {
   padding: 1rem;
   color: #BFB896;
 }
+
+.pie-link {
+  margin-left: 0.5rem;
+  color: #d9a05b;
+  font-family: "TempusSans";
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background: none;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 800ms;
+  transition-property: color;
+  text-decoration: none;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.pie-link:focus,
+.pie-link:hover {
+  color: #dfd7ad;
+}
+
+.pie-link:focus:after,
+.pie-link:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.pie-link:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  background-color: #dfd7ad;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 800ms;
+  transition-property: width, left;
+}
