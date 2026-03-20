@@ -8,41 +8,47 @@ export default function Contacto() {
                 <div className="container">
                     <div className="row pt-5">
                         <h1 className="mt-4">Contacto</h1>
-                        <hr className="mb-5" />
+                    </div>
 
-                        <div className="col-12 col-lg-4">
-                            <div className="tarjeta-contacto">
-                                <img src="contacto-wpp.webp" className="foto" loading="lazy" alt="ícono de whatsapp" />
-                                <div className="texto">
-                                    <h2>WhatsApp</h2>
-                                    <hr />
-                                    <p>Escribinos al <a href="https://wa.link/grgzh9" target="_blank">3525 - 502962</a></p>
-                                </div>
+                    <div className="botones-contacto-container">
+                        <button
+                            className="btn-contacto"
+                            onClick={() => window.open('https://wa.link/uxpdv2', '_blank')}
+                        >
+                            <img src="public/contacto-wpp.png" alt="WhatsApp" className="btn-contacto-icon" />
+                            Nuestro WhatsApp
+                            <div className="arrow-wrapper">
+                                <div className="arrow"></div>
                             </div>
-                        </div>
+                        </button>
 
-                        <div className="col-12 col-lg-4">
-                            <div className="tarjeta-contacto">
-                                <img src="contacto-instagram.webp" className="foto" loading="lazy" alt="ícono de instagram" />
-                                <div className="texto">
-                                    <h2>Instagram</h2>
-                                    <hr />
-                                    <p>Encontranos como <a href="https://www.instagram.com/saboresdecaroya" target="_blank">@saboresdecaroya</a></p>
-                                </div>
+                        <button
+                            className="btn-contacto"
+                            onClick={() => window.open('https://instagram.com/saboresdecaroya', '_blank')}
+                        >
+                            <img src="public/contacto-instagram.png" alt="Instagram" className="btn-contacto-icon" />
+                            Nuestro Instagram
+                            <div className="arrow-wrapper">
+                                <div className="arrow"></div>
                             </div>
-                        </div>
+                        </button>
 
-                        <div className="col-12 col-lg-4">
-                            <div className="tarjeta-contacto">
-                                <img src="contacto-telefono.webp" className="foto" loading="lazy" alt="ícono de telefono" />
-                                <div className="texto">
-                                    <h2>Teléfono</h2>
-                                    <hr />
-                                    <p>Llamanos al <b>3525 - 464301</b></p>
-                                </div>
+                        <button
+                            className="btn-contacto"
+                            onClick={() => window.open('https://facebook.com/saboresdecaroya', '_blank')}
+                        >
+                            <img src="public/contacto-facebook.png" alt="Facebook" className="btn-contacto-icon" />
+                            Nuestro Facebook
+                            <div className="arrow-wrapper">
+                                <div className="arrow"></div>
                             </div>
-                        </div>
+                        </button>
+                    </div>
 
+
+
+
+                    <div className="row">
                         <div className="col-12">
                             <div className="contenedor-mapa mt-5 mb-5 text-center">
                                 <h2 className="mt-2 mb-2 pasa-a-visitarnos">¡Pasá a visitarnos!</h2>

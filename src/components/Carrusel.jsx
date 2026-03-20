@@ -1,28 +1,39 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 export default function Carrusel() {
     const [indiceActual, setIndiceActual] = useState(0)
     const imagenes = ['hero1.webp', 'hero2.webp', 'hero3.webp', 'hero5.webp', 'hero6.webp']
+    const intervaloRef = useRef(null)
+
+    // Función para iniciar/reiniciar el intervalo
+    const iniciarIntervalo = () => {
+        if (intervaloRef.current) clearInterval(intervaloRef.current)
+        intervaloRef.current = setInterval(() => {
+            setIndiceActual((prev) => (prev + 1) % imagenes.length)
+        }, 5000)
+    }
 
     // Auto-cambio cada 5 segundos
     useEffect(() => {
-        const intervalo = setInterval(() => {
-            setIndiceActual((prev) => (prev + 1) % imagenes.length)
-        }, 5000)
-
-        return () => clearInterval(intervalo)
-    }, [])
+        iniciarIntervalo()
+        return () => {
+            if (intervaloRef.current) clearInterval(intervaloRef.current)
+        }
+    }, [imagenes.length])
 
     const irAlAnterior = () => {
         setIndiceActual((prev) => (prev - 1 + imagenes.length) % imagenes.length)
+        iniciarIntervalo()
     }
 
     const irAlSiguiente = () => {
         setIndiceActual((prev) => (prev + 1) % imagenes.length)
+        iniciarIntervalo()
     }
 
     const irAImagen = (indice) => {
         setIndiceActual(indice)
+        iniciarIntervalo()
     }
 
     return (

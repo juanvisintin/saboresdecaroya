@@ -4,14 +4,6 @@
     overflow: hidden;
 }
 
-#seccion-contacto a {
-    color: #BFB896;
-    text-decoration: none;
-    background-color: #50433b;
-    padding: 0.5rem;
-    border-radius: 1rem;
-}
-
 .contacto-background {
     position: absolute;
     top: 0;
@@ -38,97 +30,128 @@
     z-index: 3;
 }
 
-#contacto .col-lg-4 {
+/* Botón contacto */
+.btn-contacto {
+    --primary-color: #50433b;
+    --secondary-color: #BFB896;
+    --hover-color: #111;
+    --arrow-width: 10px;
+    --arrow-stroke: 2px;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 20px;
+    color: var(--secondary-color);
+    padding: 1em 1.8em;
+    background: var(--primary-color);
     display: flex;
+    transition: 0.2s background;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6em;
+    font-weight: 600;
+    font-family: "TempusSans";
+    margin: 0 auto;
+    margin-top: 1rem;
 }
 
-.tarjeta-contacto {
-    background-color: rgb(38, 36, 35);
-    padding: 1.25em 5em 3.5em 1.25em;
-    border-radius: 4px;
-    position: relative;
-    margin-bottom: 1.5em;
-    min-height: 180px;
+/* Contenedor de botones de contacto */
+.botones-contacto-container {
     display: flex;
     flex-direction: column;
+    gap: 1rem;
+    align-items: center;
     justify-content: center;
     width: 100%;
-    overflow: hidden;
+    margin: 0 auto;
+    padding: 0;
 }
 
-.tarjeta-contacto p {
-    text-align: left;
+/* Responsive - Hasta 500px: ocupar ancho del contenedor-mapa */
+@media (max-width: 500px) {
+    .botones-contacto-container {
+        width: 100%;
+    }
+
+    .btn-contacto {
+        width: 100%;
+    }
 }
 
-.tarjeta-contacto .foto {
-    position: absolute;
-    width: 30%;
-    right: 1.25em;
-    top: 1.25em;
+/* Responsive - Entre 500px y 1200px: máximo 500px */
+@media (min-width: 501px) and (max-width: 1199px) {
+    .botones-contacto-container {
+        max-width: 500px;
+        width: 100%;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+
+    .btn-contacto {
+        width: 100%;
+    }
+}
+
+/* Responsive - A partir de 1200px: uno al lado del otro */
+@media (min-width: 1200px) {
+    .botones-contacto-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+        max-width: none;
+        width: auto;
+        margin: 0 auto;
+    }
+
+    .btn-contacto {
+        flex: 1;
+    }
+}
+
+.btn-contacto-icon {
+    max-width: 5rem;
     object-fit: contain;
-    border-radius: 4px;
 }
 
-.tarjeta-contacto hr {
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    width: 50%;
-
-}
-
-/* Desktop - Breakpoint 1018px para Contacto */
-@media (min-width: 1018px) {
-    .tarjeta-contacto .foto {
-        width: 35%;
-    }
-}
-
-.texto {
-    position: relative;
-    z-index: 1;
+.btn-contacto .arrow-wrapper {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
+    align-items: center;
 }
 
-.texto p {
-    margin-bottom: 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    line-clamp: 3;
-    -webkit-box-orient: vertical;
+.btn-contacto .arrow {
+    margin-top: 1px;
+    width: var(--arrow-width);
+    background: var(--primary-color);
+    height: var(--arrow-stroke);
+    position: relative;
+    transition: 0.2s;
 }
 
-/* Desktop - Breakpoint 1018px para Contacto */
-@media (min-width: 1018px) {
-    .texto {
-        height: auto;
-    }
-
-    .texto p {
-        -webkit-line-clamp: unset;
-        line-clamp: unset;
-        overflow: visible;
-    }
+.btn-contacto .arrow::before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    border: solid var(--secondary-color);
+    border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+    display: inline-block;
+    top: -3px;
+    right: 3px;
+    transition: 0.2s;
+    padding: 3px;
+    transform: rotate(-45deg);
 }
 
-/* Desktop - Breakpoint 1018px para Contacto */
-@media (min-width: 1018px) {
-    .tarjeta-contacto {
-        min-height: 200px;
-    }
+.btn-contacto:hover {
+    background-color: var(--hover-color);
+}
 
-    .texto {
-        height: auto;
-    }
+.btn-contacto:hover .arrow {
+    background: var(--secondary-color);
+}
 
-    .texto p {
-        -webkit-line-clamp: unset;
-        line-clamp: unset;
-        overflow: visible;
-    }
+.btn-contacto:hover .arrow:before {
+    right: 0;
 }
 
 .contenedor-mapa {
@@ -160,24 +183,4 @@
 
 .pasa-a-visitarnos::before {
     background-image: none !important;
-}
-
-/* Desktop - Breakpoint 1018px para Contacto */
-@media (min-width: 1018px) {
-    #contacto-section {
-        padding: 65px 100px;
-    }
-
-    .col-lg-4 {
-        flex: 0 0 calc(33.333% - 0px);
-        max-width: calc(33.333% - 0px);
-    }
-}
-
-/* Mobile - Breakpoint menor a 1018px */
-@media (max-width: 1017px) {
-    .col-lg-4 {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
 }
