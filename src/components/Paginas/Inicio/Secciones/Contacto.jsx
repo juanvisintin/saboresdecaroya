@@ -16,7 +16,7 @@ export default function Contacto() {
                             onClick={() => window.open('https://wa.link/uxpdv2', '_blank')}
                         >
                             <img src="public/contacto-wpp.png" alt="WhatsApp" className="btn-contacto-icon" />
-                            Nuestro WhatsApp
+                            WhatsApp
                             <div className="arrow-wrapper">
                                 <div className="arrow"></div>
                             </div>
@@ -27,7 +27,7 @@ export default function Contacto() {
                             onClick={() => window.open('https://instagram.com/saboresdecaroya', '_blank')}
                         >
                             <img src="public/contacto-instagram.png" alt="Instagram" className="btn-contacto-icon" />
-                            Nuestro Instagram
+                            Instagram
                             <div className="arrow-wrapper">
                                 <div className="arrow"></div>
                             </div>
@@ -38,7 +38,7 @@ export default function Contacto() {
                             onClick={() => window.open('https://facebook.com/saboresdecaroya', '_blank')}
                         >
                             <img src="public/contacto-facebook.png" alt="Facebook" className="btn-contacto-icon" />
-                            Nuestro Facebook
+                            Facebook
                             <div className="arrow-wrapper">
                                 <div className="arrow"></div>
                             </div>
