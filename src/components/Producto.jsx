@@ -47,7 +47,7 @@ export default function Producto({ nombre, descripcion, imagen }) {
                 onMouseLeave={() => setHover(false)}
                 data-hover={hover}
             >
-                <img src={imagen} className="producto-imagen" loading="lazy" />
+                <img src={imagen} className="producto-imagen" loading="lazy" alt="Imagen del producto" />
                 <div className="producto-overlay">
                     <p className="producto-ver-mas">Ver más...</p>
                 </div>
@@ -57,7 +57,7 @@ export default function Producto({ nombre, descripcion, imagen }) {
             <div className={`modal-overlay ${modalAbierto ? 'activo' : ''} ${cerrando ? 'cerrando' : ''}`} onClick={cerrarModal}>
                 <div className={`modal-contenedor-producto ${isSmall ? 'vertical' : 'horizontal'}`} onClick={(e) => e.stopPropagation()}>
                     <button className="modal-cerrar" onClick={cerrarModal}>×</button>
-                    <img src={imagen} className="modal-imagen-producto" loading="lazy" />
+                    <img src={imagen} className="modal-imagen-producto" loading="lazy" alt="Imagen del producto" />
                     <div className="modal-info-producto">
                         <h2>{nombre}</h2>
                         <p>{descripcion}</p>

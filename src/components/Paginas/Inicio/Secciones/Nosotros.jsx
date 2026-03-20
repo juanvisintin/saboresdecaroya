@@ -66,13 +66,15 @@ export default function Nosotros() {
                             {isMobile ? (
                                 <img
                                     src="exterior-negocio.webp"
-                                    className="foto" loading="lazy"
+                                    className="foto" loading="lazy" alt="Comparativa del local de ventas, 1973 y 2023."
                                 />
                             ) : (
                                 <img
                                     src="exterior-negocio.webp"
+                                    alt="Comparativa del local de ventas, 1973 y 2023."
                                     className="foto"
-                                    onClick={abrirModal} loading="lazy"
+                                    onClick={abrirModal}
+                                    loading="lazy"
                                 />
                             )}
                         </div>
@@ -84,7 +86,7 @@ export default function Nosotros() {
             <div className={`modal-overlay ${modalAbierto ? 'activo' : ''} ${cerrando ? 'cerrando' : ''}`} onClick={cerrarModal}>
                 <div className="modal-contenido" onClick={(e) => e.stopPropagation()}>
                     <button className="modal-cerrar" onClick={cerrarModal}>&times;</button>
-                    <img src="exterior-negocio.webp" className="modal-imagen" loading="lazy" />
+                    <img src="exterior-negocio.webp" className="modal-imagen" loading="lazy" alt="Comparativa del local de ventas, 1973 y 2023."/>
                 </div>
             </div>
         </>
