@@ -15,7 +15,7 @@ export default function Contacto() {
                             className="btn-contacto"
                             onClick={() => window.open('https://wa.link/uxpdv2', '_blank')}
                         >
-                            <img src="contacto-wpp.png" alt="WhatsApp" className="btn-contacto-icon" />
+                            <img src="contacto-wpp.webp" alt="WhatsApp" className="btn-contacto-icon" loading="lazy" />
                             WhatsApp
                             <div className="arrow-wrapper">
                                 <div className="arrow"></div>
@@ -26,7 +26,7 @@ export default function Contacto() {
                             className="btn-contacto"
                             onClick={() => window.open('https://instagram.com/saboresdecaroya', '_blank')}
                         >
-                            <img src="contacto-instagram.png" alt="Instagram" className="btn-contacto-icon" />
+                            <img src="contacto-instagram.webp" alt="Instagram" className="btn-contacto-icon" loading="lazy" />
                             Instagram
                             <div className="arrow-wrapper">
                                 <div className="arrow"></div>
@@ -37,7 +37,7 @@ export default function Contacto() {
                             className="btn-contacto"
                             onClick={() => window.open('https://facebook.com/saboresdecaroya', '_blank')}
                         >
-                            <img src="contacto-facebook.png" alt="Facebook" className="btn-contacto-icon" />
+                            <img src="contacto-facebook.webp" alt="Facebook" className="btn-contacto-icon" loading="lazy" />
                             Facebook
                             <div className="arrow-wrapper">
                                 <div className="arrow"></div>
