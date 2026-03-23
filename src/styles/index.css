@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'TempusSans';
-  src: url('/fonts/TEMPSITC.TTF') format('truetype');
+  src: url('/fonts/TEMPSITC.woff') format('truetype');
   font-display: swap;
 }
 

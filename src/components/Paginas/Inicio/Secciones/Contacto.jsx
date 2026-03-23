@@ -55,7 +55,8 @@ export default function Contacto() {
                                 <p className="dias-horarios">Te esperamos en <b>Pedro Patat (S) 105</b>,</p>
                                 <p>en la esquina de la plaza</p>
                                 <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3419.112978758603!2d-64.06434402451416!3d-31.023101774445436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x943262648b67f569%3A0x769417cfbe265970!2sSabores%20de%20Caroya!5e0!3m2!1ses!2sar!4v1744626418366!5m2!1ses!2sar"
+                                    title="Mapa de la ubicación del local"
+                                    rc="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3419.112978758603!2d-64.06434402451416!3d-31.023101774445436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x943262648b67f569%3A0x769417cfbe265970!2sSabores%20de%20Caroya!5e0!3m2!1ses!2sar!4v1744626418366!5m2!1ses!2sar"
                                     width="800" height="400"
                                     allowFullScreen=""
                                     loading="lazy"

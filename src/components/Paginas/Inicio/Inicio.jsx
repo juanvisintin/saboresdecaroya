@@ -16,10 +16,12 @@ export default function Inicio() {
   return (
     <>
       <MemoNavbar />
-      <MemoHero />
-      <MemoNosotros />
-      <MemoProductos />
-      <MemoContacto />
+      <main>
+        <MemoHero />
+        <MemoNosotros />
+        <MemoProductos />
+        <MemoContacto />
+      </main>
     </>
   )
 }
