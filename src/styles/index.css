@@ -1,3 +1,10 @@
+/* parche para la línea derecha en mobile */ 
+
+body, html {
+  overflow-x: hidden; /* Corta cualquier cosa que se quiera salir de costado */
+  width: 100%;
+}
+
 @font-face {
   font-family: 'TempusSans';
   src: url('/fonts/TEMPSITC.woff') format('truetype');
