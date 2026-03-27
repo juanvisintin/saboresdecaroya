@@ -44,8 +44,7 @@ export default function Nosotros() {
                 <div className="container">
                     <div className="row pt-5 pb-5" id='nosotros'>
                         <div className="col-12">
-                            <h1>Nosotros</h1>
-                            <hr />
+                            <h1 className='mb-4'>Nosotros</h1>
                         </div>
                         <div className="col-12 col-md-9">
                             <p>Sabores de Caroya es un emprendimiento familiar dedicado a la elaboración artesanal de alimentos tradicionales caroyenses, especializándose en el <b>Salame Típico de Colonia Caroya</b> y complementando este producto emblemático con exquisitos jamones, bondiolas, lomitos, dulces y conservas.</p>

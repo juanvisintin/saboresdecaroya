@@ -71,8 +71,7 @@ export default function Productos() {
                 <div className="container pt-5 pb-5">
                     <div className="row">
                         <div className="col-12">
-                            <h1 className="productos-titulo">Productos</h1>
-                            <hr className="mb-5" />
+                            <h1 className="productos-titulo mb-5">Productos</h1>
                             <div className="productos-content mb-4">
                                 <p>Toda la linea de productos son elaborados íntegramente en Colonia Caroya cuidando la calidad de los mismos respetando las disposiciones higiénico-sanitarias para ofrecerles productos inocuos y de alta calidad.</p>
 
