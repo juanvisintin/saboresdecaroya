@@ -39,7 +39,7 @@ const PRODUCTOS = [
     },
     {
         nombre: "Vinos",
-        descripcion: "Bebamos de las copas lindas. Vinos de las mejores bodegas caroyenses. Muchos de ellos premiados nacional e internacionalmente. El mejor acompañamiento para una picada.",
+        descripcion: "Vinos de las mejores bodegas caroyenses. Muchos de ellos premiados nacional e internacionalmente. El mejor acompañamiento para una picada.",
         imagen: "producto-vino.webp"
     },
     {
@@ -49,12 +49,12 @@ const PRODUCTOS = [
     },
     {
         nombre: "Tablas",
-        descripcion: "Tablas de algarrobo curadas con cera de abeja. Artesanales, añorables y perpetuas.",
+        descripcion: "Tablas de madera curadas con cera de abeja. Algarrobo, guayubira, mermelero, paraíso, saligna.",
         imagen: "producto-tablas.webp"
     },
     {
         nombre: "Licores",
-        descripcion: "Licores y grapas. Bebidas alcohólicas de graduación considerable. Auyentan el frío y a Mandinga (o lo llaman, dependiendo de la hora y cantidad).",
+        descripcion: "Licores y grapas. Bebidas alcohólicas de graduación considerable.", /* Auyentan el frío y a Mandinga (o lo llaman, dependiendo de la hora y cantidad) */
         imagen: "producto-licores.webp"
     },
     {
@@ -96,7 +96,7 @@ export default function Productos() {
 
                     <div className="row">
                         <div className="col-12 mt-5 text-center">
-                            
+
                             {/* BOTÓN VER TODOS LOS PRODUCTOS Y LISTA DE PRECIOS
                             
                             <button
