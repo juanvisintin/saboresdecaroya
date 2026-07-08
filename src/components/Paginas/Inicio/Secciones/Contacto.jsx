@@ -52,7 +52,7 @@ export default function Contacto() {
                         <div className="col-12">
                             <div className="contenedor-mapa mt-5 mb-5 text-center">
                                 <h2 className="mt-2 mb-2 pasa-a-visitarnos">¡Pasá a visitarnos!</h2>
-                                <p className="dias-horarios">Te esperamos en <b>Pedro Patat (S) 105</b>,</p>
+                                <p className="dias-horarios">Te esperamos en <b>Pedro Patat (S) 103</b>,</p>
                                 <p>en la esquina de la plaza</p>
                                 <iframe
                                     title="Mapa de la ubicación del local"
